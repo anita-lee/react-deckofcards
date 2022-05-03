@@ -1,20 +1,22 @@
+/** Simple presentation component for a card.
+ *
+ * Props:
+ * - cards: array of drawn card objects:  [ {image, value, suit, code} ]
+ *
+ * State: none
+ *
+ *  CardContainer  -> Card
+ **/
 
-
-function Card({card}) {
-  const c = card[0]
-  console.log("c", card);
+function Card({cards}) {
 
   return (
-    <div>
-      <img src={c.image} alt={`${c.value} of ${c.suit}`} />
+    <div className="Card-container">
+      {cards.map(c => (
+        <img src={c.image} alt={`${c.value} of ${c.suit}`} key={c.code} className="Card-card"/>
+      ))}
     </div>
   )
 }
 
 export default Card;
-
-
-//[{"image": "https://deckofcardsapi.com/static/img/KH.png",
-// "value": "KING",
-// "suit": "HEARTS",
-// "code": "KH"}]
