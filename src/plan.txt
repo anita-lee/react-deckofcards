@@ -1,0 +1,20 @@
+App
+props: none
+state: none
+
+
+CardContainer
+props:  none
+state:  deck (look at api to what comes back) - useEffect
+        card (renders a new card)
+event:  drawCard - axios call to get the next card
+
+
+Card
+props:  card
+state:  none
+
+//check if works
+//alert button when remaining is 0
+//map each card into an array to keep track
+//hide card component until button is clicked. 
